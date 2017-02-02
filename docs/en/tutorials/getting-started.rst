@@ -378,7 +378,7 @@ notify the EntityManager that a new entity should be inserted into the database
 you have to call ``persist()``. To initiate a transaction to actually perform
 the insertion, You have to explicitly call ``flush()`` on the ``EntityManager``.
 
-This distinction between persist and flush is allows to aggregate all writes
+This distinction between persist and flush allows ``EntityManager`` to aggregate all writes
 (INSERT, UPDATE, DELETE) into one single transaction, which is executed when
 flush is called. Using this approach the write-performance is significantly
 better than in a scenario where updates are done for each entity in isolation.
